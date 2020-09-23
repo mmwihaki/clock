@@ -33,23 +33,38 @@ body{
 
 }
 
-#sec{
-    position: absolute;
-    height: 50px;
-    width: 3px;
-    background-color: red;
-}
 
-#hour{
-    position: absolute;
-    height: 150px;
-    width: 3px;
+.hand{
+    /* apply the width */
+    width: 10px;
+    height: 30%;
     background-color: black;
+    /* apply the height */
+    /* apply the background-color */
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+    transform-origin: bottom;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
 }
 
-#min{
-    position: absolute;
-    height: 100px;
-    width: 3px;
-    background-color: white;
+#hour {
+width: 8px;
+height: 28%;
+background-color: #000;
+}
+
+#minute {
+width: 5px;
+height: 38%;
+background-color: #000;
+}
+
+
+#second {
+width: 3px;
+height: 40%;
+background-color: #ff0000;
 }
