@@ -7,34 +7,35 @@
     <title>Clock</title>
 </head>
 <body>
-    <div id="clock" class="clock">
-        <div class="hand hour"></div>
-        <div class="hand minutes"></div>
-        <div class="hand seconds"></div>
+    <div class="clock">
+        <div class="hand hr"></div>
+        <div class="hand minute"></div>
+        <div class="hand second"></div>
     </div>
+
 
     <script>
         const second = document.querySelector('.second')
-        const minutes = document.querySelector('.minutes')
-        const hour = document.querySelector('.hour')
+        const minute = document.querySelector('.minute')
+        const hr = document.querySelector('.hr')
 
-        function rotate(){
-            const currentDate = new Date();
+        function setDate() {
+            const now = new Date();
 
-            const seconds = currentDate.getSeconds();
-            const secondsDegrees = ((seconds/60) * 360) + 90;
-            seconds.style.transform = `rotate(${secondsDegrees}deg)`;
+            const seconds = now.getSeconds();
+            const secondsDegrees = ((seconds / 60) * 360) + 90;
+            second.style.transform = `rotate(${secondsDegrees}deg)`;
         
-            const minutes = currentDate.getMinutes();
-            const minutesDegress = ((minutes/60) * 360) + 90;
-            minutes.style.transform = `rotate(${minutesDegress}deg)`;
+            const minutes = now.getMinutes();
+            const minutesDegrees = ((minutes / 60) * 360) + 90;
+            minute.style.transform = `rotate(${minutesDegrees}deg)`;
 
-            const hour = currentDate.getHour();
-            const hourDegrees = ((hour/12) * 360) +90;
-            hour.style.transform = `rotate(${hourDegrees}deg)`;
+            const hour = now.getMinutes();
+            const hourDegrees = ((minutes / 12) * 360) + 90;
+            hr.style.transform = `rotate(${hourDegrees}deg)`;
         };
 
-        setInterval(rotate, 1000);
+        setInterval(setDate, 1000);
     </script>
 </body>
 </html> 
