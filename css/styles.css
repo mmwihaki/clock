@@ -1,8 +1,11 @@
 body{
-    background-color: aliceblue;
-    margin: 0;
-    padding: 0;
+    min-width: 100vw;
+    min-height: 100vh;
     overflow: hidden;
+    background-color: #2948ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #clock{
@@ -15,6 +18,7 @@ body{
     background-size: cover;
     position: relative;
     border: 8px solid #000;
+    background-color: #73ff00;
 
 }
 
@@ -35,12 +39,6 @@ body{
 
 
 .hand{
-    /* apply the width */
-    width: 10px;
-    height: 30%;
-    background-color: black;
-    /* apply the height */
-    /* apply the background-color */
     position: absolute;
     bottom: 50%;
     left: 50%;
@@ -48,22 +46,25 @@ body{
     transform-origin: bottom;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
+    transition: all 0.05s; 
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+
 }
 
-#hour {
+.hour {
 width: 8px;
 height: 28%;
 background-color: #000;
 }
 
-#minute {
+.minutes {
 width: 5px;
 height: 38%;
 background-color: #000;
 }
 
 
-#second {
+.seconds {
 width: 3px;
 height: 40%;
 background-color: #ff0000;
