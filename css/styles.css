@@ -18,8 +18,19 @@ body{
 
 }
 
-.clock{
-    background-image: url(images/face.png);
+/*dot at the centre*/
+.clock::before{
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+
 }
 
 #sec{
